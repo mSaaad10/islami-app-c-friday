@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_c10_thursday/ui/home/hadeth_tab/hadeth_details_screen.dart';
 import 'package:islami_c10_thursday/ui/home/home_screen.dart';
 import 'package:islami_c10_thursday/ui/home/quran_tab/quran_details_screen.dart';
@@ -12,6 +13,12 @@ class MyApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: [
+        Locale('en'), // English
+        Locale('ar'), // Spanish
+      ],
+      locale: Locale('ar'),
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
       themeMode: ThemeMode.dark,

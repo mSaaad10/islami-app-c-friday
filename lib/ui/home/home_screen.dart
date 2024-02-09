@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_c10_thursday/ui/home/hadeth_tab/hadeth_tab.dart';
 import 'package:islami_c10_thursday/ui/home/quran_tab/quran_tab.dart';
 import 'package:islami_c10_thursday/ui/home/radio_tab/radio_tab.dart';
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           title: Text(
-            'Islami',
+            AppLocalizations.of(context)!.app_title,
             style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
@@ -46,29 +47,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: ImageIcon(
                   AssetImage('assets/images/quran_ic.png'),
                 ),
-                label: 'Quran'),
+                label: AppLocalizations.of(context)!.quran_tab),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(
                   AssetImage('assets/images/hadeth_ic.png'),
                 ),
-                label: 'Hadeth'),
+                label: AppLocalizations.of(context)!.hadeth_tab),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(
                   AssetImage('assets/images/sebha_ic.png'),
                 ),
-                label: 'Tasbeeh'),
+                label: AppLocalizations.of(context)!.tasbeh_tab),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(
                   AssetImage('assets/images/radio_ic.png'),
                 ),
-                label: 'Radio'),
+                label: AppLocalizations.of(context)!.radio_tab),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: Icon(Icons.settings),
-                label: 'settings'),
+                label: AppLocalizations.of(context)!.settings_tab),
           ],
         ),
         body: tabs[selectedIndexTab],
